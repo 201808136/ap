@@ -6,10 +6,7 @@ $("#ng").hide();
 $("#aw").hide();
 
 var sleep = 0;
-const doneSleep;
-const doneWake;
-const doneEat;
-const doneEx;
+
 // check for jquery
 $(function () {
   console.log("hello jquery!");
@@ -70,7 +67,6 @@ function am(){
    $("#gr").show();
    $("#am").hide();
    localStorage.setItem("slp", sleep);
-  doneSleep = localStorage.getItem('slp');
 }
 
 $("#gr").on('click', gr);
@@ -78,7 +74,6 @@ function gr(){
   $("#ok").show();
   $("#gr").hide();
   localStorage.setItem("wakeup", sleep);
-  doneWake = localStorage.getItem("wakeup") - localStorage.getItem('slp');
 }
 
 $("#ok").on('click', ok);
@@ -87,7 +82,6 @@ function ok(){
   $("#ng").show();
   $("#ok").hide();
   localStorage.setItem("eat", sleep);
-  doneEat = localStorage.getItem("eat") - localStorage.getItem("wakeup");
 }
 
 $("#ng").on('click', ng);
@@ -97,13 +91,11 @@ function ng(){
   localStorage.setItem("work", sleep);
   document.querySelector("#gráficos").style.opacity = "1";  
   $("#other").hide();
-  doneEx = localStorage.getItem("work") - localStorage.getItem("eat");
 }
 
 //esta parte ainda não funciona
 //var k = localStorage.getItem("time");
 const totalDays = 31;
-
 const doneSleep = localStorage.getItem('slp');
 const doneWake = localStorage.getItem("wakeup") - localStorage.getItem('slp');
 const doneEat = localStorage.getItem("eat") - localStorage.getItem("wakeup");
