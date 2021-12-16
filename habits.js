@@ -103,11 +103,11 @@ function ng(){
 //esta parte ainda não funciona
 //var k = localStorage.getItem("time");
 const totalDays = 31;
-/*
+
 const doneSleep = localStorage.getItem('slp');
 const doneWake = localStorage.getItem("wakeup") - localStorage.getItem('slp');
 const doneEat = localStorage.getItem("eat") - localStorage.getItem("wakeup");
-const doneEx = localStorage.getItem("work") - localStorage.getItem("eat");*/
+const doneEx = localStorage.getItem("work") - localStorage.getItem("eat");
 
 function percentage(partialValue, totalValue) {
   return (100 * partialValue) / totalValue;
