@@ -205,9 +205,9 @@ function login() {
 $('#save').on('click', savename);
 function savename() {
   localStorage.setItem("nome", nomes);
-  if (nomes == ""){
+ /* if (nomes == ""){
     $("#warn").show();
-    }else{
+    }else{*/
       window.location.href= 'home.html';
-    }
+    //}
 }
